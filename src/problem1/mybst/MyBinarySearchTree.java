@@ -8,81 +8,42 @@ package problem1.mybst;
 import problem1.node.TreeNode;
 // to implement BinarySearchTree
 public class MyBinarySearchTree {
-  private TreeNode root;
-  private int countRight;
-  pubic void insert(int data) {
-        TreeNode node = new TreeNode(data);
+   public static StringBuilder preOrderString;
+    static int levels = 0;
+    public TreeNode root;
+
+    public MyBinarySearchTree() {
+        this.root = null;
+        preOrderString = new StringBuilder();
+    }
+
+    public static void preOrder(TreeNode root) {
         if (root == null) {
-            root = node;
-        } else {
-            TreeNode current = root;
-            TreeNode parent = null;
-            while (current != null) {
-                parent = current;
-                if (node.getData() < current.getData()) {
-                    current = current.getLeft();
-                } else {
-                    current = current.getRight();
-                }
-            }
-            if (node.getData() < parent.getData()) {
-                parent.setLeft(node);
-            } else {
-                parent.setRight(node);
-            }
-        }
-    }
-  public TreeNode getRoot() {
-        return root;
-    }
-
-    public void setRoot(TreeNode root) {
-        this.root = root;
-    }
-   public int getCountRight() {
-        return countRight;
-    }
-
-    public void setCountRight(int countRight) {
-        this.countRight = countRight;
-    }
-  public void preOrder(TreeNode temp) {
-        if (temp == null) {
             return;
-        } else {
-            System.out.println(temp.getData());
-            preOrder(temp.getLeft());
-            preOrder(temp.getRight());
         }
+        preOrderString.append(root.getKey() + " ");
+        preOrder(root.getLeft());
+        preOrder(root.getRight());
     }
-    public void inOrder(TreeNode temp) {
-        if (temp == null) {
-            return;
-        } else {
 
-            inOrder(temp.getLeft());
-            System.out.println(temp.getData());
-            inOrder(temp.getRight());
-        }
+    public void add(final int value) {
+        this.root = addService(this.root, value);
     }
-  public void traverse() {
-        TreeNode current = root;
-        TreeNode parent = null;
-        this.countRight = 0;
-        while (current != null) {
-            if (current.getLeft() == null) {
-                countRight++;
-            }
-            if (parent.getData() == current.getData()) {
 
-            }
-            if (parent.getData() < current.getData()) {
-                System.out.println(current.getData());
-                current = current.getLeft();
-            }
-            if (parent.getData() > current.getData()) {
-                current = current.getRight();
-            }
+    public TreeNode addService(final TreeNode treeRoot, final int addingValue) {
+        if (treeRoot == null) {
+            return new TreeNode(addingValue);
         }
+        if (addingValue < treeRoot.getKey()) {
+            treeRoot.setLeft(addService(treeRoot.getLeft(), addingValue));
+        } else if (addingValue == treeRoot.getKey()) {
+            return treeRoot;
+        } else {
+            treeRoot.setRight(addService(treeRoot.getRight(), addingValue));
+        }
+
+        return treeRoot;
     }
+
+    
 }
