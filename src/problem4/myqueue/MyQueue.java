@@ -19,4 +19,21 @@ public class MyQueue {
         rear = null;
         size = 0;
     }
+    public void enqueue(TreeNode root) {
+        preOrder(root);
+        String[] data = preOrderString.toString().split(" ");
+        for (int i = 0; i < data.length; i++) {
+            Node node = new Node(Integer.parseInt(data[i]));
+            if (front == null) {
+                rear = node;
+                front = node;
+                size++;
+            } else {
+                rear.setNext(node);
+                rear = node;
+                size++;
+            }
+        }
+    }
+
 }
