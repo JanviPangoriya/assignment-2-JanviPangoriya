@@ -12,4 +12,13 @@ public class MyMain {
       public static void main(String[] args) {
       MyBinarySearchTree tree = new MyBinarySearchTree();
       Scanner scanner = new Scanner(System.in);
+      System.out.println("How many element do you want to add....");
+      for(int i=0;i<Integer.parseInt(scanner.nextLine());i++)
+      {
+            tree.add(scanner.nextInt());
+      }
+       tree.preOrder(tree.root);
+       System.out.println();
+       tree.postOrder(tree.root);
+       
 }
