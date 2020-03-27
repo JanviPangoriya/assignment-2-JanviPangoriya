@@ -10,4 +10,6 @@ import problem3.myqueue.MyPriorityQueue;
 // executable class
 // use problem5.student.Student class to create object of student
 public class MyMain {
+  MyPriorityQueue queue = new MyPriorityQueue();
+   Scanner sc = new Scanner(System.in);
 }
