@@ -9,4 +9,24 @@ package problem5.student;
 public class Student {
    private int backlogCount;
    private String studentName;
+    public Student(String studentName, int back) {
+        this.studentName = studentName;
+        backlogCount = back;
+    }
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public int getBacklogCount() {
+        return backlogCount;
+    }
+
+    public void setBacklogCount(int backlogCount) {
+        this.backlogCount = backlogCount;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
 }
