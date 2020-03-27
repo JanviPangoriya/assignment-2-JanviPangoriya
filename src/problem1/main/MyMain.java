@@ -15,4 +15,14 @@ public class MyMain {
   public static void main(String[] args) {
   MyBinarySearchTree tree = new MyBinarySearchTree();
     Scanner scanner = new Scanner(System.in);
+    tree.add(scanner.nextInt());
+    tree.add(scanner.nextInt());
+    tree.add(scanner.nextInt());
+    tree.add(scanner.nextInt());
+    tree.add(scanner.nextInt());
+    tree.add(scanner.nextInt());
+    tree.add(scanner.nextInt());
+    tree.add(scanner.nextInt());
+    tree.add(scanner.nextInt());
+    tree.add(scanner.nextInt());
 }
