@@ -15,5 +15,13 @@ public class MyMain {
   System.out.println("How manydo you wnat to add");
   int ch = sc.nextInt();
         sc.nextLine();
-  
+  for(int i=1;i<=ch;i++)
+  {
+    System.out.println("Enter the Student name");
+    String n = sc.nextLine();
+    System.out.println("Enter the Roll Number for the student");
+    int r = sc.nextInt();
+    Student student = new Student(n, r);
+    queue.enqueue(student);
+    sc.nextLine(); 
 }
