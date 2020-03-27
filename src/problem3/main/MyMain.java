@@ -24,4 +24,6 @@ public class MyMain {
     Student student = new Student(n, r);
     queue.enqueue(student);
     sc.nextLine(); 
+  }
+  queue.show();
 }
