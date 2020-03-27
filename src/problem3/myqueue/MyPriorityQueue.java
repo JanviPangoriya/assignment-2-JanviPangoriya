@@ -10,4 +10,7 @@ import problem3.Student;
 import problem3.node.Node;
 
 public class MyPriorityQueue {
+    private Node rear;
+    private Node front;
+    private int size;
 }
