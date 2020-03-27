@@ -12,4 +12,8 @@ import problem3.myqueue.MyPriorityQueue;
 public class MyMain {
   MyPriorityQueue queue = new MyPriorityQueue();
    Scanner sc = new Scanner(System.in);
+  System.out.println("How manydo you wnat to add");
+  int ch = sc.nextInt();
+        sc.nextLine();
+  
 }
