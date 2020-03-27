@@ -39,6 +39,13 @@ public class MyBinarySearchTree {
     public void setRoot(TreeNode root) {
         this.root = root;
     }
+   public int getCountRight() {
+        return countRight;
+    }
+
+    public void setCountRight(int countRight) {
+        this.countRight = countRight;
+    }
   public void preOrder(TreeNode temp) {
         if (temp == null) {
             return;
