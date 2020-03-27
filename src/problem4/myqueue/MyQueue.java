@@ -6,6 +6,8 @@
  */
 package problem4.myqueue;
 // to create queue to store pre - order successor
-
+import problem1.node.TreeNode;
+import static problem1.mybst.MyBinarySearchTree.preOrder;
+import static problem1.mybst.MyBinarySearchTree.preOrderString;
 public class MyQueue {
 }
