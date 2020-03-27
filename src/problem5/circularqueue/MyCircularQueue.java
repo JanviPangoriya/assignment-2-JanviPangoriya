@@ -43,3 +43,24 @@ private static boolean isEmpty() {
             response = true;
         return response;
 }
+      public static boolean dequeue() {
+        boolean response = false;
+        if (!isEmpty()) {
+            size--;
+            response = true;
+            if (rear.getNext() == rear) {
+                rear = null;
+            } else {
+                rear.setNext(rear.getNext().getNext());
+            }
+        }
+        return response;
+    }
+     public Node peek() {
+        Node response = null;
+        if (!isEmpty()) {
+            response = rear.getNext();
+        }
+        return response;
+    }
+}
