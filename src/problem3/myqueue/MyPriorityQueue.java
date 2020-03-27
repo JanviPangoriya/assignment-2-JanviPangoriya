@@ -63,5 +63,7 @@ public void show()
         temp= temp.getNext();
     }
 }
-
+    public void peek() {
+        System.out.println(front.getData());
+    }
 }
