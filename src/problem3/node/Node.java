@@ -5,6 +5,6 @@
  *  Time: 7:13 PM
  */
 package problem3.node;
-impoprt problem3.Student;
+import problem3.Student;
 public class Node {
 }
