@@ -30,5 +30,9 @@ public class Node {
   {
     this.data=data;
   }
+  public int compareTo(Student data)
+  {
+    return data.getRollNo()-this.data.getRollNo();
+  }
   
 }
