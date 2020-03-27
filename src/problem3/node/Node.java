@@ -7,4 +7,28 @@
 package problem3.node;
 import problem3.Student;
 public class Node {
+  private Student data;
+  private Node next;
+  public Node(Student data)
+  {
+    this.data=data;
+    next=null;
+  }
+  public Node getNext()
+  {
+    return next;
+  }
+  public Student getData()
+  {
+    return data;
+  }
+  public void setNext(Node next)
+  {
+    this.next=next;
+  }
+  public void setData(Student data)
+  {
+    this.data=data;
+  }
+  
 }
