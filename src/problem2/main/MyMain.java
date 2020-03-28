@@ -6,19 +6,22 @@
  */
 package problem2.main;
 import problem1.mybst.MyBinarySearchTree;
+import problem1.node.TreeNode;
 // executable class
 // use problem1.mybst.MyBinarySearchTree class for creating binary tree
 public class MyMain {
       public static void main(String[] args) {
+            Traversal t =new Traversal();
       MyBinarySearchTree tree = new MyBinarySearchTree();
       Scanner scanner = new Scanner(System.in);
+            TreeNode root= new TreeNode(10);
       System.out.println("How many element do you want to add....");
       for(int i=0;i<Integer.parseInt(scanner.nextLine());i++)
       {
-            tree.add(scanner.nextInt());
+            tree.insert(root,scanner.nextInt());
       }
-       tree.preOrder(tree.root);
+       t.printPreorder(root);
        System.out.println();
-       tree.postOrder(tree.root);
+       t.printPostorder(root);
        
 }
