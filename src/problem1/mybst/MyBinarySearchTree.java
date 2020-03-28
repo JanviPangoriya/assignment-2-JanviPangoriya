@@ -38,7 +38,7 @@ public class MyBinarySearchTree {
             System.out.println(root.getData());
 
             inorderRec(root.getRight());
-
+        }
         }
         public void countNodeWithOutLeftChild(TreeNode root){
            if(root==null)
@@ -81,12 +81,9 @@ public class MyBinarySearchTree {
 
                         q.add(temp.getLeft());
                        if (temp.getRight() != null)
-
-                        q.add(temp.getRight());
+                           q.add(temp.getRight());
                        q.remove();
-
-
-                    temp = q.peek();
+                       temp = q.peek();
                  }
                 q.add(null);
 
