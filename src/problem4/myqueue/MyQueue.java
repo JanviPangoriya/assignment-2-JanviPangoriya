@@ -10,5 +10,9 @@ import problem1.node.TreeNode;
 import static problem1.mybst.MyBinarySearchTree.preOrder;
 import static problem1.mybst.MyBinarySearchTree.preOrderString;
 public class MyQueue {
+   private Node front; 
+   private Node end;
+   private Node tmp;
+   private int size;
    
 }
