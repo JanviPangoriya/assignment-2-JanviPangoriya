@@ -23,5 +23,5 @@ public class MyMain {
        t.printPreorder(root);
        System.out.println();
        t.printPostorder(root);
-       
+      }
 }
