@@ -1,27 +1,16 @@
 package problem4.myqueue;
 import problem1.node.TreeNode;
 public class Node {
-    private int data;
     private Node next;
+    private TreeNode node;
 
     public Node(int data) {
-        this.data = data;
-        next = null;
+        node=new TreeNode(data);
+        next=null;
     }
-
-    public int getData() {
-        return data;
-    }
-
-    public void setData(int data) {
-        this.data = data;
-    }
-
-    public Node getNext() {
-        return next;
-    }
-
-    public void setNext(Node next) {
-        this.next = next;
+    public Node(TreeNode treeNode)
+    {
+        node=treeNode;
+        next=null;
     }
 }
