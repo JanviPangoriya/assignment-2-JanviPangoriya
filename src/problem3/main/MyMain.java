@@ -10,6 +10,7 @@ import problem3.myqueue.MyPriorityQueue;
 // executable class
 // use problem5.student.Student class to create object of student
 public class MyMain {
+  public static void main(String args){
   MyPriorityQueue queue = new MyPriorityQueue();
    Scanner sc = new Scanner(System.in);
   System.out.println("How manydo you wnat to add");
@@ -26,4 +27,5 @@ public class MyMain {
     sc.nextLine(); 
   }
   queue.show();
+}
 }
